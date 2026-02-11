@@ -66,7 +66,7 @@ def get_gemini_client(api_key):
     genai.configure(api_key=api_key)
     return genai
 
-def ask_gemini(prompt, api_key, model_name="gemini-1.5-pro-latest", image=None):
+def ask_gemini(prompt, api_key, model_name="gemini-1.5-flash", image=None):
     client = get_gemini_client(api_key)
     if not client:
         return "APIキーを設定してください。"

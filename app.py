@@ -7,7 +7,7 @@ import time
 
 # --- 1. Page & State Configuration ---
 st.set_page_config(
-    page_title="暮らしのパートナー (My Life Partner)",
+    page_title="Wife Energy",
     page_icon="🌿",
     layout="centered",
     initial_sidebar_state="expanded"
@@ -66,7 +66,7 @@ def get_gemini_client(api_key):
     genai.configure(api_key=api_key)
     return genai
 
-def ask_gemini(prompt, api_key, model_name="gemini-1.5-flash", image=None):
+def ask_gemini(prompt, api_key, model_name="gemini-2.5-flash", image=None):
     client = get_gemini_client(api_key)
     if not client:
         return "APIキーを設定してください。"
@@ -86,7 +86,7 @@ def ask_gemini(prompt, api_key, model_name="gemini-1.5-flash", image=None):
 with st.sidebar:
     st.title("🌿 設定")
     api_key = st.text_input("Google API Key", type="password", help="Gemini APIキーを入力してください")
-    postal_code = st.text_input("郵便番号 (例: 150-0001)", value="100-0001")
+    postal_code = st.text_input("郵便番号 (例: 150-0001)", value="134-0083")
     
     st.markdown("---")
     st.write("心と暮らしを整える、\nあなただけのパートナー。")
